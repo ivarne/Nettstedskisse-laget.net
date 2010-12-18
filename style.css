@@ -1,0 +1,90 @@
+/*
+#9D0200
+#EE0000
+#DDB70A
+#4E5A0E
+#FDF5D0
+#75900D
+#F3E87F
+*/
+body{
+   background:#9D0200;
+}
+div.header{
+   background:#EE0000;
+}
+div.container{
+   background:#FDF5D0;
+}
+
+/* Begin Menu styling*/
+ul.menu{
+   text-align: right;
+   font: 13px verdana, arial, sans-serif;
+   list-style-type: none;
+   padding: 0px;
+   margin: 0px;
+   margin-right: 3px;
+}
+ul.menu li{
+   margin-top: 10px;
+}
+ul.menu li a{
+   text-decoration:none;
+   color: black;
+   padding: 5px;
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+}
+ul.menu li.active a{
+   border: 2px solid #75900D
+}
+ul.menu li a:hover{
+   background: #75900D;
+}
+
+/* End Menu styling*/
+/* begin css tabs */
+ul.tabnav { /* general settings */
+text-align: center; /* set to left, right or center */
+margin: 1em 0 1em 0; /* set margins as desired */
+font: 30px verdana, arial, sans-serif; /* set font as desired */
+border-bottom: 2px solid #75900D; /* set border COLOR as desired */
+list-style-type: none;
+padding: 3px 10px 4px 10px; /* THIRD number must change with respect to padding-top (X) below */
+}
+
+ul.tabnav li { /* do not change */
+display: inline;
+-moz-border-radius:10px 10px 0px 0px;
+-webkit-border-radius:10px 10px 0px 0px;
+}
+
+ul.tabnav li.active{ /* settings for selected tab */
+border-bottom: 2px #FDF5D0; /* set border color to page background color */
+}
+
+ul.tabnav li.active a { /* settings for selected tab link */
+background-color: #FDF5D0; /* set selected tab background color as desired */
+color: #000; /* set selected tab link color as desired */
+position: relative;
+top: 2px;
+padding-top: 6px; /* must change with respect to padding (X) above and below */
+}
+
+ul.tabnav li a { /* settings for all tab links */
+padding: 4px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+border: 2px solid #75900D; /* set border COLOR as desired; usually matches border color specified in #tabnav */
+background-color: #75900D; /* set unselected tab background color as desired */
+color: #666; /* set unselected tab link color as desired */
+margin-right: 0px; /* set additional spacing between tabs as desired */
+text-decoration: none;
+border-bottom: none;
+-moz-border-radius:10px 10px 0px 0px;
+-webkit-border-radius:10px 10px 0px 0px;
+}
+
+ul.tabnav a:hover { /* settings for hover effect */
+background: #FDF5D0; /* set desired hover color */
+}
+/* end css tabs */
