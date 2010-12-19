@@ -13,7 +13,7 @@ $menu = array(
     ),
   'Hvordan'=>array(
       'Om laget',
-      'Udergrupper',
+      'Arbeidsgrupper',
       'Lover',
       'Lenker',
     ),

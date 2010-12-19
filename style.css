@@ -6,85 +6,101 @@
 #FDF5D0
 #75900D
 #F3E87F
+
+background: #FFFFFF; /* for non-css3 browsers * /
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#FDF5D0', endColorstr='#FFFFFF'); /* for IE * /
+background: -webkit-gradient(linear, left top, left bottom, from(#FDF5D0), to(#FFFFFF)); /* for webkit browsers *m/
+background: -moz-linear-gradient(top,  #FDF5D0,  #FFFFFF); /* for firefox 3.6+ * /
+
 */
-body{
-   background:#9D0200;
-}
+
 div.header{
-   background:#EE0000;
-}
-div.container{
-   background:#FDF5D0;
-}
-
-/* Begin Menu styling*/
-ul.menu{
-   text-align: right;
-   font: 13px verdana, arial, sans-serif;
-   list-style-type: none;
-   padding: 0px;
-   margin: 0px;
-   margin-right: 3px;
-}
-ul.menu li{
-   margin-top: 10px;
-}
-ul.menu li a{
-   text-decoration:none;
-   color: black;
-   padding: 5px;
-   -moz-border-radius: 10px;
-   -webkit-border-radius: 10px;
-}
-ul.menu li.active a{
-   border: 2px solid #75900D
-}
-ul.menu li a:hover{
-   background: #75900D;
+	background: #EE0000; /* for non-css3 browsers */
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#9D0200', endColorstr='#EE0000'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#9D0200), to(#EE0000)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #9D0200,  #EE0000); /* for firefox 3.6+ */
+	margin-bottom:30px;
 }
 
-/* End Menu styling*/
+
 /* begin css tabs */
-ul.tabnav { /* general settings */
-text-align: center; /* set to left, right or center */
-margin: 1em 0 1em 0; /* set margins as desired */
-font: 30px verdana, arial, sans-serif; /* set font as desired */
-border-bottom: 2px solid #75900D; /* set border COLOR as desired */
-list-style-type: none;
-padding: 3px 10px 4px 10px; /* THIRD number must change with respect to padding-top (X) below */
+.tabnav { /* general settings */
+   display:block;
+   position:relative;
+   margin: 0 0 0 0; /* set margins as desired */
+   font: 30px verdana, arial, sans-serif; /* set font as desired */
+   list-style-type: none;
+   padding: 3px 10px 4px 10px; /* THIRD number must change with respect to padding-top (X) below */
 }
 
-ul.tabnav li { /* do not change */
-display: inline;
--moz-border-radius:10px 10px 0px 0px;
--webkit-border-radius:10px 10px 0px 0px;
-}
-
-ul.tabnav li.active{ /* settings for selected tab */
-border-bottom: 2px #FDF5D0; /* set border color to page background color */
-}
-
-ul.tabnav li.active a { /* settings for selected tab link */
-background-color: #FDF5D0; /* set selected tab background color as desired */
-color: #000; /* set selected tab link color as desired */
-position: relative;
-top: 2px;
-padding-top: 6px; /* must change with respect to padding (X) above and below */
-}
-
-ul.tabnav li a { /* settings for all tab links */
+.tabnav li { /* do not change */
+float:left;
+margin-right:15px;
 padding: 4px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
 border: 2px solid #75900D; /* set border COLOR as desired; usually matches border color specified in #tabnav */
 background-color: #75900D; /* set unselected tab background color as desired */
 color: #666; /* set unselected tab link color as desired */
-margin-right: 0px; /* set additional spacing between tabs as desired */
 text-decoration: none;
 border-bottom: none;
 -moz-border-radius:10px 10px 0px 0px;
 -webkit-border-radius:10px 10px 0px 0px;
+border-radius:10px 10px 0px 0px;
 }
 
-ul.tabnav a:hover { /* settings for hover effect */
+.tabnav > li > a { 
+padding: 4px 4px; 
+color: #666;
+text-decoration: none;
+border-bottom: none;
+-moz-border-radius:10px 10px 0px 0px;
+-webkit-border-radius:10px 10px 0px 0px;
+border-radius:10px 10px 0px 0px;
+}
+
+.tabnav ul a{
+   padding:4px;
+   border:2px solid #75900D;
+   text-decoration:none;
+   -moz-border-radius:10px;
+   -webkit-border-radius:10px;
+   border-radius:10px;
+}
+
+.tabnav li.active{ /* settings for selected tab link */
+background-color: #FDF5D0; /* set selected tab background color as desired */
+}
+
+.tabnav li.active a{
+   color:#000;
+}
+
+.tabnav li:hover { /* settings for hover effect */
 background: #FDF5D0; /* set desired hover color */
 }
+.tabnav:hover li.active ul{
+   display:none;
+}
+
+.tabnav ul {
+   display:none;
+   position:absolute;
+   font: 12px verdana, arial, sans-serif; /* set font as desired */
+   list-style-type: none;
+   top:48px;
+   padding:0px;
+}
+.tabnav ul li{
+   border:0;
+   background:transparent !important;
+   display:inline;
+   position:relative;
+}
+.tabnav li.active ul{
+   display:block;
+}
+.tabnav li:hover ul{
+   display:block !important;
+   z-index:1;
+}
+
 /* end css tabs */

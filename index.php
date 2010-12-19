@@ -18,30 +18,32 @@ exit('feil i tab.<a href='.$_SERVER['REQUEST_URI'].'?tab=Medlem>prøv dette</a>'
     <!-- Import fancy-type plugin for the sample page. -->
     <link rel="stylesheet" href="./blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
   </head>
-  <body id="tab3" class="<?php echo isset($_GET['debug'])?'showgrid':''?>">
+  <body class="<?php echo isset($_GET['debug'])?'showgrid':''?>">
     <div class="container">
-      <div class="header noprint">
+      <div class="span-24 header noprint">
         <div class=" prepend-21 span-3 last">
           Norsk | Engelsk
         </div>
         <h1>Laget.net</h1>
         <ul class="tabnav">
-          <?php foreach($menu as $page => $subpage):?>
+          <?php foreach($menu as $page => $subpages):?>
           <li<?php echo ($_GET['tab']==$page)?' class="active"':'' ?>>
             <a href="index.php?tab=<?php echo $page?>"><?php echo $page?></a>
+            <?php if ($subpages):?> 
+            <ul>
+              <?php foreach($subpages as $subpage): ?>
+                <li>
+                  <a href="index.php?tab=<?php echo $page?>&amp;subpage=<?php echo $subpage?>"><?php echo $subpage?></a>
+                </li>
+              <?php endforeach?>
+            <?php endif ?>
+            </ul>
           </li>
           <?php endforeach;?>
         </ul>
       </div>
-      <div class="span-20">
+      <div class="span-24">
       <?php include "./${_GET['tab']}.php";?>
-      </div>
-      <div class="span-4 last right">
-        <ul class="menu">
-          <?php foreach($menu[$_GET['tab']] as $page):?>
-          <li<?php echo mt_rand(0,4)?'':' class="active"'?>><a href=''><?php echo $page ?></a></li>
-          <?php endforeach;?>
-        </ul>
       </div>
       <hr>
       <h2 class="alt">Velkommen til alfakurs til våren om du har lyst.</h2>
