@@ -35,10 +35,7 @@ div.header{
 
 .tabnav li { /* do not change */
 float:left;
-margin-right:15px;
 padding: 4px 4px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
-border: 2px solid #75900D; /* set border COLOR as desired; usually matches border color specified in #tabnav */
-background-color: #75900D; /* set unselected tab background color as desired */
 color: #666; /* set unselected tab link color as desired */
 text-decoration: none;
 border-bottom: none;
@@ -50,6 +47,7 @@ border-radius:10px 10px 0px 0px;
 .tabnav > li > a { 
 padding: 4px 4px; 
 color: #666;
+background-color: #75900D; /* set unselected tab background color as desired */
 text-decoration: none;
 border-bottom: none;
 -moz-border-radius:10px 10px 0px 0px;
@@ -61,20 +59,17 @@ border-radius:10px 10px 0px 0px;
    padding:4px;
    border:2px solid #75900D;
    text-decoration:none;
-   -moz-border-radius:10px;
-   -webkit-border-radius:10px;
-   border-radius:10px;
-}
-
-.tabnav li.active{ /* settings for selected tab link */
-background-color: #FDF5D0; /* set selected tab background color as desired */
+   -moz-border-radius:15px;
+   -webkit-border-radius:15px;
+   border-radius:15px;
 }
 
 .tabnav li.active a{
    color:#000;
+   background-color: #FDF5D0;
 }
 
-.tabnav li:hover { /* settings for hover effect */
+.tabnav li:hover a{ /* settings for hover effect */
 background: #FDF5D0; /* set desired hover color */
 }
 .tabnav:hover li.active ul{
@@ -86,8 +81,10 @@ background: #FDF5D0; /* set desired hover color */
    position:absolute;
    font: 12px verdana, arial, sans-serif; /* set font as desired */
    list-style-type: none;
-   top:48px;
+   top:40px;
    padding:0px;
+   padding-bottom:40px;
+   padding-top:9px;
 }
 .tabnav ul li{
    border:0;
