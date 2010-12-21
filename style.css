@@ -27,12 +27,12 @@ div.header{
 
 /* begin css tabs */
 .tabnav { /* general settings */
-   display:block;
    position:relative;
    margin: 0 0 0 0; /* set margins as desired */
    font: 30px verdana, arial, sans-serif; /* set font as desired */
    list-style-type: none;
-   padding: 3px 10px 4px 10px; /* THIRD number must change with respect to padding-top (X) below */
+   padding: 3px 0px 4px 80px; /* THIRD number must change with respect to padding-top (X) below */
+   z-index:2;
 }
 
 .tabnav li { /* do not change */
@@ -47,7 +47,6 @@ padding: 4px 4px;
 color: #666;
 background-color: #75900D; /* set unselected tab background color as desired */
 text-decoration: none;
-z-index:2;
 border-bottom: none;
 -moz-border-radius:10px 10px 0px 0px;
 -webkit-border-radius:10px 10px 0px 0px;
@@ -86,6 +85,7 @@ background: #FDF5D0; /* set desired hover color */
    padding-bottom:40px;
    left:10px;
    width:100%;
+   z-index:-1;
 }
 .tabnav ul li{
    border:0;

@@ -26,14 +26,14 @@ exit('feil i tab.<a href='.$_SERVER['REQUEST_URI'].'?tab=Medlem>prøv dette</a>'
         </div>
         <h1>Laget.net</h1>
         <ul class="tabnav">
-          <?php foreach($menu as $page => $subpages):?>
-          <li<?php echo ($_GET['tab']==$page)?' class="active"':'' ?>>
-            <a href="index.php?tab=<?php echo $page?>"><?php echo $page?></a>
-            <?php if ($subpages):?> 
+          <?php foreach($menu as $page):?>
+          <li<?php echo ('?'.$_SERVER['QUERY_STRING']==($page['link']))?' class="active"':'' ?>>
+            <a href="<?php echo $page['link']?>" title="<?php echo $page['title'] ?>"><?php echo $page['text']?></a>
+            <?php if (isset($page['children'])):?> 
             <ul>
-              <?php foreach($subpages as $subpage): ?>
+              <?php foreach($page['children'] as $subpage): ?>
                 <li>
-                  <a href="index.php?tab=<?php echo $page?>&amp;subpage=<?php echo $subpage?>"><?php echo $subpage?></a>
+                  <a href="<?php echo $subpage['link']?>" title="<?php echo $subpage['title'] ?>"><?php echo $subpage['text']?></a>
                 </li>
               <?php endforeach?>
             <?php endif ?>
