@@ -63,7 +63,7 @@ border-radius:10px 10px 0px 0px;
 }
 
 .tabnav li:hover > a{ /* settings for hover effect */
-background: #FDF5D0; /* set desired hover color */
+background: #FDF5D0!important; /* set desired hover color */
 }
 
 .tabnav ul {
@@ -71,9 +71,8 @@ background: #FDF5D0; /* set desired hover color */
    position:absolute;
    font: 14px verdana, arial, sans-serif; /* set font as desired */
    list-style-type: none;
-   top:40px;
-   padding:9px;
-   padding-bottom:15px;
+   top:45px;
+   padding:6px;
    left:10px;
    min-width:60%;
    z-index:-1;
@@ -86,7 +85,7 @@ background: #FDF5D0; /* set desired hover color */
    border:2px 2px solid #75900D;
 }
 .tabnav ul a{
-   padding:4px 30px;
+   padding:10px 20px;
 }
 
 /*Vis undermenye for den aktive taben*/

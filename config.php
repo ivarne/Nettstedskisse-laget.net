@@ -42,6 +42,11 @@ $menu = array(
         'title'=>'Info om utlevirksomheten vår',
         'link' => '?tab=Hvor',  
       ),
+      array(
+        'text'  => 'Vassfjellkapellet',
+        'title' => 'På vassfjellet har vi et koselig fjellkapell',
+        'link' => 'http://vassfjellkapellet.no',   
+      ),
     )
   ),
 array(
