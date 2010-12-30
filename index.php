@@ -13,7 +13,7 @@ exit('feil i tab.<a href='.$_SERVER['REQUEST_URI'].'?tab=Medlem>prøv dette</a>'
     <link rel="stylesheet" href="./blueprint/screen.css" type="text/css" media="screen, projection">
     <link rel="stylesheet" href="./blueprint/print.css" type="text/css" media="print">
     <!--[if lt IE 8]><link rel="stylesheet" href="./blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="./style.css.php" type="text/css">
 
     <!-- Import fancy-type plugin for the sample page. -->
     <link rel="stylesheet" href="./blueprint/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">

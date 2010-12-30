@@ -35,7 +35,7 @@ $menu = array(
       array(
         'text' => 'Bildeguide',
         'title' => 'Vår egen bildeguide for å finne fram til Berg Prestegård fra ulike steder i byen',
-        'link' => '?tab=hvor',   
+        'link' => '?tab=Hvor',   
       ),
       array(
         'text' => 'Utleie av Berg Prestegård',
@@ -68,6 +68,11 @@ array(
       'text' => 'Lenker',
       'title' => 'Andre kristne organsiasjoner i Trondheim',
       'link' => '?tab=Lenker',  
+    ),
+    array(
+      'text' => 'Lover',
+      'title' => 'Lover for Trondheim kristne studentlag',
+      'link' => '?tab=lover',   
     ),
   )
 ),
